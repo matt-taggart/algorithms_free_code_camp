@@ -1,5 +1,7 @@
 "use strict";
 
+const assert = require('assert');
+
 function sumAll(arr) {
   let max = Math.max(...arr);
   let min = Math.min(...arr);
@@ -15,3 +17,6 @@ function sumAll(arr) {
 
   return sum;
 }
+
+assert.equal(sumAll([1, 4]), 10);
+assert.equal(sumAll([-3, 1]), -5);
