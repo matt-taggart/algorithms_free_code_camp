@@ -4,7 +4,7 @@ const assert = require('assert');
 
 //example 1
 function palindrome(str) {
-  let reverseStr = str.replace(/\W/g, '').split('').reverse().join('');
+  const reverseStr = str.replace(/\W/g, '').split('').reverse().join('');
 
   return (str.replace(/\W/g, '').toLowerCase() === reverseStr.toLowerCase());
 }
@@ -17,7 +17,7 @@ assert.notEqual(palindrome('yolo'));
 
 //example 2
 function palindrome2(str) {
-  let parsedStr = str.replace(/\W/g, '');
+  const parsedStr = str.replace(/\W/g, '');
 
   for (let i = 0, len = parsedStr.length; i < len; i++) {
     if (parsedStr[i] !== parsedStr[len - 1 - i]) {
